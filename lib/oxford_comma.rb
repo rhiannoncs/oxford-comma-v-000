@@ -1,4 +1,10 @@
 def oxford_comma(array)
-  last_word = array.pop
-  list = "#{array.join(", ")}, and #{last_word}"  
+  if array.length == 1
+    array[0]
+  elsif array.length == 2
+    array.join(" and")
+  else
+    last_word = array.pop
+    list = "#{array.join(", ")}, and #{last_word}"
+  end  
 end
